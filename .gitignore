@@ -1,0 +1,21 @@
+memory.md
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# App
+app/node_modules/
+app/dist/
+
+# OS
+.DS_Store
+Thumbs.db
