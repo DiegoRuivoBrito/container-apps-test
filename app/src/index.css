@@ -165,6 +165,61 @@ input {
   color: #f7fbff;
 }
 
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.topic-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 32px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 3px solid var(--accent);
+  background: rgba(9, 16, 41, 0.92);
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  color: #e9edf9;
+}
+
+.topic-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.topic-label {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.topic-desc {
+  font-size: 0.9rem;
+  color: #c3d0ff;
+  line-height: 1.5;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  background: none;
+  border: none;
+  color: #72a4ff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.back-button:hover {
+  opacity: 0.7;
+}
+
 @media (max-width: 720px) {
   .app-shell {
     padding: 20px 16px 36px;
@@ -173,5 +228,9 @@ input {
   .hero,
   .quiz-card {
     padding: 22px;
+  }
+
+  .topic-grid {
+    grid-template-columns: 1fr;
   }
 }
